@@ -3,3 +3,4 @@
 - font size, weight and alignment
 - borders
 - height and width
+- margin and padding
