@@ -42,15 +42,31 @@ $text-alignments: (
   justify: justify
 );
 
-// Colors
-$colors: (
-  primary: #007bff,
-  secondary: #6c757d,
-  success: #28a745,
-  danger: #dc3545,
-  warning: #ffc107,
-  light: #f8f9fa,
-  dark: #343a40,
-  white: #ffffff,
-  black: #000000
+// Border Colors
+$border-colors: (
+  "default": #e5e7eb,
+  "gray": #9ca3af,
+  "black": #000,
+  "white": #fff,
+  "primary": #3b82f6,
+  "danger": #ef4444,
+  "success": #10b981
+);
+
+// Border Radius
+$border-radius: (
+  "none": 0,
+  "sm": 0.125rem,
+  "md": 0.375rem,
+  "lg": 0.5rem,
+  "xl": 0.75rem,
+  "full": 9999px
+);
+
+// Border Widths
+$border-widths: (
+  "default": 1px,
+  "0": 0,
+  "2": 2px,
+  "4": 4px
 );
