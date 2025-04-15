@@ -9,5 +9,7 @@
 - Components:
     - Button
     - Card
+    - Alert
+    - Badge
 - Grid
 - Flex
