@@ -20,3 +20,12 @@ document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
     menu?.classList.toggle("active");
   });
 });
+
+
+// Accordion
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const body = header.nextElementSibling;
+    body?.classList.toggle('active');
+  });
+});

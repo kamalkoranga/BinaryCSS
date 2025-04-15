@@ -17,5 +17,6 @@
     - Table
     - Modal
     - Dropdown
+    - Accordion
 - Grid
 - Flex
