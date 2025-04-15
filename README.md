@@ -11,5 +11,7 @@
     - Card
     - Alert
     - Badge
+    - Form
+    - Image
 - Grid
 - Flex
