@@ -13,5 +13,7 @@
     - Badge
     - Form
     - Image
+    - Navbar
+    - Table
 - Grid
 - Flex
