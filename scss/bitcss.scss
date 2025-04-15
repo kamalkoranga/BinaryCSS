@@ -1,11 +1,11 @@
 @use 'abstracts/variables';
 @use 'abstracts/media';
 @use 'base/reset';
-@use 'utilities/layout';
 @use 'utilities/borders';
 @use 'utilities/spacing';
 @use 'utilities/typography';
 @use 'utilities/sizing';
 @use 'utilities/color';
+@use 'utilities/grid';
 @use 'components/button';
 @use 'components/card';
