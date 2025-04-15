@@ -15,5 +15,6 @@
     - Image
     - Navbar
     - Table
+    - Modal
 - Grid
 - Flex
