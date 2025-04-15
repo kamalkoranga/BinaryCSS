@@ -16,5 +16,6 @@
     - Navbar
     - Table
     - Modal
+    - Dropdown
 - Grid
 - Flex

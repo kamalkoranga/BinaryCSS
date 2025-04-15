@@ -11,3 +11,12 @@ document.querySelectorAll("[data-modal-close]").forEach((btn) => {
     btn.closest(".modal")?.classList.remove("active");
   });
 });
+
+
+// Dropdown
+document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const menu = toggle.nextElementSibling;
+    menu?.classList.toggle("active");
+  });
+});
