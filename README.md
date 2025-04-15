@@ -19,5 +19,6 @@
     - Dropdown
     - Accordion
     - Carousel
+    - Tooltip
 - Grid
 - Flex
