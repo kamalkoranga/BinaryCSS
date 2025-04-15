@@ -5,3 +5,4 @@
 - height and width
 - margin and padding
 - font color and background color
+- media queries
