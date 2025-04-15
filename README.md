@@ -6,3 +6,6 @@
 - margin and padding
 - font color and background color
 - media queries
+- Components:
+    - Button
+    - Card

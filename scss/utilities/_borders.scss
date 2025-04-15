@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "sass:map";
 
 // Base border
 .border {
@@ -30,8 +31,8 @@
 // Border widths
 @each $key, $value in $border-widths {
   .border-#{$key} {
-    @include border;
-    border-width: $value;
+    $default-border-color: map.get($border-colors, "default");
+    border: $value solid $default-border-color !important;
   }
 }
 
