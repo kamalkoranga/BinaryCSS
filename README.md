@@ -18,5 +18,6 @@
     - Modal
     - Dropdown
     - Accordion
+    - Carousel
 - Grid
 - Flex

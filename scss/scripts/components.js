@@ -29,3 +29,38 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     body?.classList.toggle('active');
   });
 });
+
+
+// Carousel
+document.querySelectorAll(".carousel").forEach((carousel) => {
+  const track = carousel.querySelector(".carousel-track");
+  const items = carousel.querySelectorAll(".carousel-item");
+  let index = 0;
+
+  const updateSlide = () => {
+    const width = carousel.offsetWidth;
+    track.style.transform = `translateX(-${index * width}px)`;
+  };
+
+  const slideTo = (newIndex) => {
+    index = (newIndex + items.length) % items.length;
+    updateSlide();
+  };
+
+  carousel
+    .querySelector('[data-carousel="prev"]')
+    ?.addEventListener("click", () => {
+      slideTo(index - 1);
+    });
+
+  carousel
+    .querySelector('[data-carousel="next"]')
+    ?.addEventListener("click", () => {
+      slideTo(index + 1);
+    });
+
+  window.addEventListener("resize", updateSlide);
+
+  // On load
+  updateSlide();
+});
