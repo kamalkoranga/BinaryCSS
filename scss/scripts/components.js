@@ -98,3 +98,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Process arbitrary height values
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[class*="h-["]').forEach(el => {
+    const classList = Array.from(el.classList);
+    const heightClass = classList.find(c => c.includes('h-['));
+    if (heightClass) {
+      const heightValue = heightClass.match(/\[(.*?)\]/)[1];
+      el.style.setProperty('--h-arbitrary', heightValue);
+    }
+  });
+
+  document.querySelectorAll('[class*="w-["]').forEach((el) => {
+    const classList = Array.from(el.classList);
+    const widthClass = classList.find((c) => c.includes("w-["));
+    if (widthClass) {
+      const widhtValue = widthClass.match(/\[(.*?)\]/)[1];
+      el.style.setProperty("--w-arbitrary", widhtValue);
+    }
+  });
+});
