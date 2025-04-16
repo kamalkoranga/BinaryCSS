@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+// Width Utilities
+@each $key, $value in $widths {
+  .w-#{$key} {
+    width: $value;
+  }
+}
+
+// Height Utilities
+@each $key, $value in $heights {
+  .h-#{$key} {
+    height: $value;
+  }
+}

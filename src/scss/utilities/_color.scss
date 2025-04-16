@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *;
+
+// Font Color Utilities
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value !important;
+  }
+}
+
+// Background Color Utilities
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    background-color: $value !important;
+  }
+}

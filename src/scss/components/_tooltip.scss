@@ -1,0 +1,49 @@
+@use "../abstracts/variables" as *;
+@use "sass:color";
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+
+  .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    z-index: 100;
+    background-color: #333;
+    color: #fff;
+  }
+
+  &:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// 🔁 Generate color utility classes
+@each $name, $value in $colors {
+  .tooltip-bg-#{$name} {
+    .tooltip-text {
+      background-color: #{$value};
+      @if (color.channel($value, "lightness", $space: hsl) > 60) {
+        color: #000;
+      } @else {
+        color: #fff;
+      }
+    }
+  }
+
+  .tooltip-text-#{$name} {
+    .tooltip-text {
+      color: #{$value};
+    }
+  }
+}

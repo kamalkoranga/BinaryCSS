@@ -1,0 +1,9 @@
+/* Text color arbitary class */
+[class*="tc-["] {
+  color: var(--text-color) !important;
+}
+
+/* background-color arbitrary class */
+[class*="bg-["] {
+  background-color: var(--background-color) !important;
+}

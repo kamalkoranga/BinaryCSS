@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+@use "sass:meta";
+
+/* Generate arbitrary value margin utilities */
+@each $dir-prefix, $dir-properties in $margin-directions {
+  $class-prefix: if($dir-prefix == '', 'm-', 'm#{$dir-prefix}-');
+
+  [class*="#{$class-prefix}["] {
+    @if meta.type-of($dir-properties) == 'list' {
+      @each $property in $dir-properties {
+        #{$property}: var(--m-arbitrary) !important;
+      }
+    } @else {
+      #{$dir-properties}: var(--m-arbitrary) !important;
+    }
+  }
+}
+
+
+/* Generate arbitrary value padding utilities */
+@each $dir-prefix, $dir-properties in $padding-directions {
+  $class-prefix: if($dir-prefix == '', 'p-', 'p#{$dir-prefix}-');
+
+  [class*="#{$class-prefix}["] {
+    @if meta.type-of($dir-properties) == 'list' {
+      @each $property in $dir-properties {
+        #{$property}: var(--p-arbitrary) !important;
+      }
+    } @else {
+      #{$dir-properties}: var(--p-arbitrary) !important;
+    }
+  }
+}

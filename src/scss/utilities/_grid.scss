@@ -1,0 +1,114 @@
+@use "../abstracts/variables" as *;
+@use "sass:math";
+@use "sass:map";
+
+// Settings
+$grid-columns: 12;
+$gutter: 1rem;
+
+// ===== Container =====
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @each $breakpoint, $size in $breakpoints {
+    @media (min-width: $size) {
+      max-width: if(
+        $breakpoint == sm,
+        540px,
+        if(
+          $breakpoint == md,
+          720px,
+          if($breakpoint == lg, 960px, if($breakpoint == xl, 1140px, 100%))
+        )
+      );
+    }
+  }
+}
+
+// ===== Row =====
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: math.div($gutter, -2);
+  margin-right: math.div($gutter, -2);
+
+  &.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+
+    > .col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+// ===== Columns =====
+.col {
+  padding-left: math.div($gutter, 2);
+  padding-right: math.div($gutter, 2);
+  flex: 1 0 0%;
+}
+
+// col-1 to col-12
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 math.div($i, $grid-columns) * 100%;
+    max-width: math.div($i, $grid-columns) * 100%;
+  }
+  .offset-#{$i} {
+    margin-left: math.div($i, $grid-columns) * 100%;
+  }
+}
+
+// ===== Auto width =====
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+// ===== Responsive Classes =====
+@each $breakpoint, $size in $breakpoints {
+  @media (min-width: $size) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        flex: 0 0 math.div($i, $grid-columns) * 100%;
+        max-width: math.div($i, $grid-columns) * 100%;
+      }
+
+      .offset-#{$breakpoint}-#{$i} {
+        margin-left: math.div($i, $grid-columns) * 100%;
+      }
+    }
+
+    .col-#{$breakpoint}-auto {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+// ===== Flex Alignments =====
+@each $val in (start, center, end, stretch, baseline) {
+  .align-items-#{$val} {
+    align-items: $val;
+  }
+}
+@each $val in (start, center, end, between, around, evenly) {
+  .justify-content-#{$val} {
+    justify-content: if(
+      $val == "between",
+      space-between,
+      if(
+        $val == "around",
+        space-around,
+        if($val == "evenly", space-evenly, $val)
+      )
+    );
+  }
+}
