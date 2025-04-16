@@ -27,3 +27,6 @@
     - padding
     - height
     - weight
+    - font-size
+    - text-color (tc-[])
+    - background-color (bg-[])

@@ -1,0 +1,11 @@
+/* Base arbitrary font-size utility */
+[class*="text-["] {
+  font-size: var(--text-size) !important;
+}
+
+/* Optional responsive variants */
+@media (min-width: 640px) {
+  [class*="sm:text-["] {
+    font-size: var(--text-size);
+  }
+}

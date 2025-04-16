@@ -119,3 +119,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Arbitrary font size
+document.querySelectorAll('[class*="text-["]').forEach(el => {
+  const textClass = [...el.classList].find(c => c.startsWith('text-['));
+  if (textClass) el.style.setProperty('--text-size', textClass.match(/\[(.*?)\]/)[1]);
+});
+
+// Arbitrary text-color
+document.querySelectorAll('[class*="tc-["]').forEach(el => {
+  const colorClass = [...el.classList].find(c => c.startsWith('tc-['));
+  if (colorClass) el.style.setProperty('--text-color', colorClass.match(/\[(.*?)\]/)[1]);
+});
+
+// Arbitrary background-color
+document.querySelectorAll('[class*="bg-["]').forEach(el => {
+  const colorClass = [...el.classList].find(c => c.startsWith('bg-['));
+  if (colorClass) el.style.setProperty("--background-color", colorClass.match(/\[(.*?)\]/)[1]);
+});
