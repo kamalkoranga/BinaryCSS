@@ -1,9 +1,0 @@
-// Generate text-color utilities with arbitrary values
-[class*="tc-["] {
-  color: var(--text-color);
-}
-
-// Generate background-color utilities with arbitrary values
-[class*="bg-["] {
-  background-color: var(--background-color) !important;
-}
