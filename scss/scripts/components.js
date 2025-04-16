@@ -64,3 +64,37 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
   // On load
   updateSlide();
 });
+
+// margin and padding arbitrary values
+document.addEventListener("DOMContentLoaded", function () {
+  const margin_prefixes = ["m-", "mt-", "mr-", "mb-", "ml-", "mx-", "my-"];
+  const padding_prefixes = ["p-", "pt-", "pr-", "pb-", "pl-", "px-", "py-"];
+
+  margin_prefixes.forEach((prefix) => {
+    document.querySelectorAll(`[class*="${prefix}["]`).forEach((el) => {
+      const classList = Array.from(el.classList);
+      const targetClass = classList.find(
+        (c) => c.startsWith(prefix) && c.includes("[")
+      );
+
+      if (targetClass) {
+        const value = targetClass.match(/\[(.*?)\]/)[1];
+        el.style.setProperty("--m-arbitrary", value);
+      }
+    });
+  });
+
+  padding_prefixes.forEach((prefix) => {
+    document.querySelectorAll(`[class*="${prefix}["]`).forEach((el) => {
+      const classList = Array.from(el.classList);
+      const targetClass = classList.find(
+        (c) => c.startsWith(prefix) && c.includes("[")
+      );
+
+      if (targetClass) {
+        const value = targetClass.match(/\[(.*?)\]/)[1];
+        el.style.setProperty("--p-arbitrary", value);
+      }
+    });
+  });
+});
