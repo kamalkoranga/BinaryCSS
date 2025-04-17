@@ -1,0 +1,123 @@
+/* BinaryCSS Framework - Variables Layer
+ * These are the variables I use throughout the framework
+ * Feel free to customize these to match your brand!
+ * Last updated: April 18, 2023
+ */
+
+:root {
+  /* My Color Palette - started with blues I liked and built from there */
+  --q-blue-50: #e6f0ff;
+  --q-blue-100: #c2d9ff;
+  --q-blue-200: #99c2ff;
+  --q-blue-300: #66a3ff;
+  --q-blue-400: #3385ff;
+  --q-blue-500: #0066ff; /* my favorite blue */
+  --q-blue-600: #0052cc;
+  --q-blue-700: #003d99;
+  --q-blue-800: #002966;
+  --q-blue-900: #001433;
+
+  /* Grays - these took forever to get right */
+  --q-gray-50: #f9fafb;
+  --q-gray-100: #eef1f5;
+  --q-gray-200: #e4e7eb;
+  --q-gray-300: #cbd2d9;
+  --q-gray-400: #9aa5b1;
+  --q-gray-500: #7b8794;
+  --q-gray-600: #616e7c;
+  --q-gray-700: #52606d;
+  --q-gray-800: #3e4c59;
+  --q-gray-900: #323f4b;
+  --q-gray-950: #1f2933;
+
+  /* Other colors I use a lot in my projects */
+  --q-green-500: #00b074; /* not too bright, not too muted */
+  --q-red-500: #e53e3e;   /* good for errors */
+  --q-yellow-500: #fcc419;
+  --q-purple-500: #805ad5; /* I need to revisit this - not sure about it */
+  
+  /* Main theme colors */
+  --q-primary: var(--q-blue-500);
+  --q-primary-light: var(--q-blue-400);
+  --q-primary-dark: var(--q-blue-600);
+  --q-secondary: var(--q-purple-500);
+  --q-success: var(--q-green-500);
+  --q-danger: var(--q-red-500);
+  --q-warning: var(--q-yellow-500);
+  
+  /* UI Colors - keep these semantic */
+  --q-bg: #ffffff;
+  --q-bg-offset: var(--q-gray-100);
+  --q-bg-inset: var(--q-gray-200);
+  --q-text: var(--q-gray-900);
+  --q-text-muted: var(--q-gray-600);
+  --q-heading: var(--q-gray-950);
+  --q-border: var(--q-gray-300);
+  --q-code: var(--q-primary-dark);
+  --q-code-bg: var(--q-gray-100);
+  --q-blockquote-bg: var(--q-gray-50);
+  
+  /* Spacing - based roughly on 4px grid but with some adjustments */
+  --q-space-1: 0.4rem;   /* 4px */
+  --q-space-2: 0.8rem;   /* 8px */
+  --q-space-3: 1.2rem;   /* 12px */
+  --q-space-4: 1.6rem;   /* 16px - most common size I use */
+  --q-space-5: 2.4rem;   /* 24px */
+  --q-space-6: 3.2rem;   /* 32px */
+  --q-space-7: 4.8rem;   /* 48px */
+  --q-space-8: 6.4rem;   /* 64px */
+  --q-space-9: 9.6rem;   /* 96px - rarely use this one but good for heroes */
+  
+  /* Shadows - took these from a Figma file I use a lot */
+  --q-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --q-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --q-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --q-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --q-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Rounded corners */
+  --q-radius-sm: 0.2rem;
+  --q-radius: 0.4rem; /* my default */
+  --q-radius-md: 0.6rem;
+  --q-radius-lg: 0.8rem;
+  --q-radius-xl: 1.2rem;
+  --q-radius-full: 9999px; /* for pills and avatars */
+  
+  /* Animation speeds */
+  --q-transition-fast: 150ms; /* quick hover effects */
+  --q-transition: 250ms; /* general transitions - changed from 300ms which felt too slow */
+  --q-transition-slow: 500ms;
+
+  /* Font settings - might move these to typography.css later */
+  --q-font-sans: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --q-font-weight-normal: 400;
+  --q-font-weight-medium: 500;
+  --q-font-weight-bold: 700;
+}
+
+/* Dark Mode Theme - still tweaking this */
+.dark-mode {
+  --q-bg: #121212; /* I like this better than the gray-950 */
+  --q-bg-offset: #1e1e1e; /* custom dark gray */
+  --q-bg-inset: #2c2c2c;
+  --q-text: #f5f5f5; /* slightly off-white is easier on the eyes than pure white */
+  --q-text-muted: #a0a0a0; 
+  --q-heading: #ffffff;
+  --q-border: #444444;
+  --q-code: #88ccff; /* brighter in dark mode for contrast */
+  --q-code-bg: #2d2d2d;
+  --q-blockquote-bg: #1a1a1a;
+
+  /* I boost the shadow opacity in dark mode */
+  --q-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --q-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* High Contrast Mode - for accessibility */
+.high-contrast {
+  --q-primary: #0057b8;
+  --q-contrast: 1.5;
+  --q-text: #000000;
+  --q-bg: #ffffff;
+  --q-border: #000000;
+}

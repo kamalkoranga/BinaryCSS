@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="90" fill="#F8F9FA" stroke="#E9ECEF" stroke-width="2"/>
+  
+  <!-- Binary Elements -->
+  <text x="65" y="90" font-family="Poppins, sans-serif" font-weight="700" font-size="24" fill="#212529">10</text>
+  <text x="90" y="120" font-family="Poppins, sans-serif" font-weight="700" font-size="24" fill="#212529">01</text>
+  <text x="115" y="150" font-family="Poppins, sans-serif" font-weight="700" font-size="24" fill="#212529">10</text>
+  
+  <!-- CSS Text -->
+  <path d="M75 60 L125 140" stroke="#4361EE" stroke-width="4" stroke-linecap="round"/>
+  <path d="M125 60 L75 140" stroke="#4361EE" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Framework Name -->
+  <text x="100" y="180" font-family="Poppins, sans-serif" font-weight="600" font-size="18" fill="#4361EE" text-anchor="middle">BinaryCSS</text>
+</svg> 

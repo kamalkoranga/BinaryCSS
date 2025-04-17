@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4361EE" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3A56D4" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle with Gradient -->
+  <circle cx="100" cy="100" r="90" fill="url(#grad1)" stroke="#4361EE" stroke-width="2"/>
+  
+  <!-- Binary Elements -->
+  <text x="65" y="90" font-family="Poppins, sans-serif" font-weight="700" font-size="24" fill="white">10</text>
+  <text x="90" y="120" font-family="Poppins, sans-serif" font-weight="700" font-size="24" fill="white">01</text>
+  <text x="115" y="150" font-family="Poppins, sans-serif" font-weight="700" font-size="24" fill="white">10</text>
+  
+  <!-- CSS Symbol -->
+  <path d="M75 60 L125 140" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M125 60 L75 140" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Framework Name -->
+  <text x="100" y="180" font-family="Poppins, sans-serif" font-weight="600" font-size="18" fill="white" text-anchor="middle"></text>
+</svg> 
