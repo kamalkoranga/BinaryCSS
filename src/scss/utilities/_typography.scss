@@ -10,7 +10,7 @@
 // Font Weight Utilities
 @each $key, $value in $font-weights {
   .font-#{$key} {
-    font-weight: $value;
+    font-weight: $value !important;
   }
 }
 
