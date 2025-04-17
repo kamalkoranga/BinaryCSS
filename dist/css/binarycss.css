@@ -1698,7 +1698,7 @@ body {
 }
 
 .flex {
-  display: flex;
+  display: flex !important;
 }
 
 .inline-flex {
@@ -1762,7 +1762,7 @@ body {
 }
 
 .items-center {
-  align-items: center;
+  align-items: center !important;
 }
 
 .items-end {
@@ -1851,64 +1851,64 @@ body {
 
 /* Generate arbitrary value margin utilities */
 [class*="m-["] {
-  margin: var(--m-arbitrary) !important;
+  margin: var(--margin-arbitrary) !important;
 }
 
 [class*="mt-["] {
-  margin-top: var(--m-arbitrary) !important;
+  margin-top: var(--margin-top-arbitrary) !important;
 }
 
 [class*="mr-["] {
-  margin-right: var(--m-arbitrary) !important;
+  margin-right: var(--margin-right-arbitrary) !important;
 }
 
 [class*="mb-["] {
-  margin-bottom: var(--m-arbitrary) !important;
+  margin-bottom: var(--margin-bottom-arbitrary) !important;
 }
 
 [class*="ml-["] {
-  margin-left: var(--m-arbitrary) !important;
+  margin-left: var(--margin-left-arbitrary) !important;
 }
 
 [class*="mx-["] {
-  margin-left: var(--m-arbitrary) !important;
-  margin-right: var(--m-arbitrary) !important;
+  margin-left: var(--margin-left-arbitrary) !important;
+  margin-right: var(--margin-right-arbitrary) !important;
 }
 
 [class*="my-["] {
-  margin-top: var(--m-arbitrary) !important;
-  margin-bottom: var(--m-arbitrary) !important;
+  margin-top: var(--margin-top-arbitrary) !important;
+  margin-bottom: var(--margin-bottom-arbitrary) !important;
 }
 
 /* Generate arbitrary value padding utilities */
 [class*="p-["] {
-  padding: var(--p-arbitrary) !important;
+  padding: var(--padding-arbitrary) !important;
 }
 
 [class*="pt-["] {
-  padding-top: var(--p-arbitrary) !important;
+  padding-top: var(--padding-top-arbitrary) !important;
 }
 
 [class*="pr-["] {
-  padding-right: var(--p-arbitrary) !important;
+  padding-right: var(--padding-right-arbitrary) !important;
 }
 
 [class*="pb-["] {
-  padding-bottom: var(--p-arbitrary) !important;
+  padding-bottom: var(--padding-bottom-arbitrary) !important;
 }
 
 [class*="pl-["] {
-  padding-left: var(--p-arbitrary) !important;
+  padding-left: var(--padding-left-arbitrary) !important;
 }
 
 [class*="px-["] {
-  padding-left: var(--p-arbitrary) !important;
-  padding-right: var(--p-arbitrary) !important;
+  padding-left: var(--padding-left-arbitrary) !important;
+  padding-right: var(--padding-right-arbitrary) !important;
 }
 
 [class*="py-["] {
-  padding-top: var(--p-arbitrary) !important;
-  padding-bottom: var(--p-arbitrary) !important;
+  padding-top: var(--padding-top-arbitrary) !important;
+  padding-bottom: var(--padding-bottom-arbitrary) !important;
 }
 
 /* height arbitrary class */

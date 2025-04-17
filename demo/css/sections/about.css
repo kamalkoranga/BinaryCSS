@@ -10,8 +10,6 @@
     flex-direction: column;
     justify-content: center;
   
-    background: var(--color-white);
-  
     position: relative;
   }
   

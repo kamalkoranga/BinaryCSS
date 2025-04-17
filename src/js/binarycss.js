@@ -65,12 +65,29 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
   updateSlide();
 });
 
-// margin and padding arbitrary values
+// // margin and padding arbitrary values
 document.addEventListener("DOMContentLoaded", function () {
-  const margin_prefixes = ["m-", "mt-", "mr-", "mb-", "ml-", "mx-", "my-"];
-  const padding_prefixes = ["p-", "pt-", "pr-", "pb-", "pl-", "px-", "py-"];
+  const marginMap = {
+    "m-": ["margin"],
+    "mx-": ["margin-left", "margin-right"],
+    "my-": ["margin-top", "margin-bottom"],
+    "mt-": ["margin-top"],
+    "mr-": ["margin-right"],
+    "mb-": ["margin-bottom"],
+    "ml-": ["margin-left"],
+  };
 
-  margin_prefixes.forEach((prefix) => {
+  const paddingMap = {
+    "p-": ["padding"],
+    "px-": ["padding-left", "padding-right"],
+    "py-": ["padding-top", "padding-bottom"],
+    "pt-": ["padding-top"],
+    "pr-": ["padding-right"],
+    "pb-": ["padding-bottom"],
+    "pl-": ["padding-left"],
+  };
+
+  Object.keys(marginMap).forEach((prefix) => {
     document.querySelectorAll(`[class*="${prefix}["]`).forEach((el) => {
       const classList = Array.from(el.classList);
       const targetClass = classList.find(
@@ -79,12 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (targetClass) {
         const value = targetClass.match(/\[(.*?)\]/)[1];
-        el.style.setProperty("--m-arbitrary", value);
+        marginMap[prefix].forEach((property) => {
+          el.style.setProperty(`--${property}-arbitrary`, value);
+        });
       }
     });
   });
 
-  padding_prefixes.forEach((prefix) => {
+  Object.keys(paddingMap).forEach((prefix) => {
     document.querySelectorAll(`[class*="${prefix}["]`).forEach((el) => {
       const classList = Array.from(el.classList);
       const targetClass = classList.find(
@@ -93,11 +112,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (targetClass) {
         const value = targetClass.match(/\[(.*?)\]/)[1];
-        el.style.setProperty("--p-arbitrary", value);
+        paddingMap[prefix].forEach((property) => {
+          el.style.setProperty(`--${property}-arbitrary`, value);
+        });
       }
     });
   });
 });
+
+
 
 // Process arbitrary height values
 document.addEventListener('DOMContentLoaded', () => {

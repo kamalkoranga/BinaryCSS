@@ -8,10 +8,10 @@
   [class*="#{$class-prefix}["] {
     @if meta.type-of($dir-properties) == 'list' {
       @each $property in $dir-properties {
-        #{$property}: var(--m-arbitrary) !important;
+        #{$property}: var(--#{$property}-arbitrary) !important;
       }
     } @else {
-      #{$dir-properties}: var(--m-arbitrary) !important;
+      #{$dir-properties}: var(--#{$dir-properties}-arbitrary) !important;
     }
   }
 }
@@ -24,10 +24,12 @@
   [class*="#{$class-prefix}["] {
     @if meta.type-of($dir-properties) == 'list' {
       @each $property in $dir-properties {
-        #{$property}: var(--p-arbitrary) !important;
+        #{$property}: var(--#{$property}-arbitrary) !important;
+
       }
     } @else {
-      #{$dir-properties}: var(--p-arbitrary) !important;
+      #{$dir-properties}: var(--#{$dir-properties}-arbitrary) !important;
     }
+
   }
 }

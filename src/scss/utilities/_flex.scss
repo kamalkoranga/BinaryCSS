@@ -2,7 +2,7 @@
 
 // ========== Display Flex ==========
 .flex {
-  display: flex;
+  display: flex !important;
 }
 .inline-flex {
   display: inline-flex;
@@ -58,7 +58,7 @@
   align-items: flex-start;
 }
 .items-center {
-  align-items: center;
+  align-items: center !important;
 }
 .items-end {
   align-items: flex-end;
