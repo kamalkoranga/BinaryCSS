@@ -3098,7 +3098,7 @@
                 <p class="big-font mt-2">Learn how to use our lightweight, modern CSS framework to build beautiful
                     websites</p>
                 <div class="hero-buttons mt-3">
-                    <a href="https://github.com/Deepakdumka1/css-framework.git" class="btn btn-outline-primary"><i
+                    <a href="https://github.com/kamalkoranga/BinaryCSS" class="btn btn-outline-primary" target="_blank"><i
                             class="fab fa-github mr-1"></i> GitHub</a>
                     <a href="#download" class="btn btn-primary"><i class="fas fa-download mr-1"></i> Download v1.0</a>
                 </div>
@@ -3184,9 +3184,27 @@
                         <p>You can include BinaryCSS in your project in several ways:</p>
 
                         <div class="installation-options mt-3">
+                            <div class="installation-option mb-3 border-thin p-3 border-l-thick border-l-info">
+                                <h4 class="fw-thick">Option 1: CDN</h4>
+                                <p>Include BinaryCSS directly from a CDN:</p>
+
+                                <div class="code-block mt-2">
+                                    <div
+                                        class="code-header flex align-items-center justify-content-between border-b-thin py-1 px-2">
+                                        <span class="code-label">HTML</span>
+                                        <button class="copy-btn tiny-font border-thin">Copy</button>
+                                    </div>
+                                    <pre class="m-0"><code class="language-html">&lt;!-- CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kamalkoranga/BinaryCSS@latest/dist/css/binarycss.min.css"&gt;
+
+&lt;!-- JavaScript (optional) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/kamalkoranga/BinaryCSS@latest/dist/js/binarycss.min.js"&gt;&lt;/script&gt;</code></pre>
+                                </div>
+                            </div>
+
                             <div class="installation-option mb-3 border-thin p-3 border-l-thick border-l-primary">
-                                <h4 class="fw-thick">Option 1: Direct Download</h4>
-                                <p>Download the pre-compiled CSS and JS files directly from the <a href="#"
+                                <h4 class="fw-thick">Option 2: Direct Download</h4>
+                                <p>Download the pre-compiled CSS and JS files directly from the <a target="_blank" href="https://github.com/kamalkoranga/BinaryCSS"
                                         class="font-primary">downloads page</a>.</p>
 
                                 <div class="code-block mt-2">
@@ -3202,38 +3220,6 @@
 &lt;script src="path/to/Binary.js"&gt;&lt;/script&gt;</code></pre>
                                 </div>
                             </div>
-
-                            <div class="installation-option mb-3 border-thin p-3 border-l-thick border-l-success">
-                                <h4 class="fw-thick">Option 2: Package Manager</h4>
-                                <p>Install BinaryCSS via npm:</p>
-
-                                <div class="code-block mt-2">
-                                    <div
-                                        class="code-header flex align-items-center justify-content-between border-b-thin py-1 px-2">
-                                        <span class="code-label">Terminal</span>
-                                        <button class="copy-btn tiny-font border-thin">Copy</button>
-                                    </div>
-                                    <pre class="m-0"><code class="language-bash">npm install BinaryCSS</code></pre>
-                                </div>
-                            </div>
-
-                            <div class="installation-option mb-3 border-thin p-3 border-l-thick border-l-info">
-                                <h4 class="fw-thick">Option 3: CDN</h4>
-                                <p>Include BinaryCSS directly from a CDN:</p>
-
-                                <div class="code-block mt-2">
-                                    <div
-                                        class="code-header flex align-items-center justify-content-between border-b-thin py-1 px-2">
-                                        <span class="code-label">HTML</span>
-                                        <button class="copy-btn tiny-font border-thin">Copy</button>
-                                    </div>
-                                    <pre class="m-0"><code class="language-html">&lt;!-- CSS --&gt;
-&lt;link rel="stylesheet" href="https://cdn.example.com/BinaryCSS/1.0.0/Binary.min.css"&gt;
-
-&lt;!-- JavaScript (optional) --&gt;
-&lt;script src="https://cdn.example.com/BinaryCSS/1.0.0/Binary.min.js"&gt;&lt;/script&gt;</code></pre>
-                                </div>
-                            </div>
                         </div>
 
                         <h3 id="basics" class="small-heading fw-thick mt-4 mb-2">Basic Usage</h3>
@@ -3245,44 +3231,112 @@
                                 <span class="code-label">HTML</span>
                                 <button class="copy-btn tiny-font border-thin">Copy</button>
                             </div>
-                            <pre class="m-0"><code class="language-html">&lt;!DOCTYPE html&gt;
+                    
+
+<pre class="m-0"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;title&gt;My BinaryCSS Project&lt;/title&gt;
-&lt;link rel="stylesheet" href="path/to/Binary.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class="container"&gt;
-&lt;h1&gt;Hello, BinaryCSS!&lt;/h1&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;!-- &lt;link rel="stylesheet" href="../dist/css/binarycss.css" /&gt; --&gt;
+     &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kamalkoranga/BinaryCSS@latest/dist/css/binarycss.min.css"&gt;
+    &lt;!-- &lt;script src="../dist/js/binarycss.js" defer&gt;&lt;/script&gt; --&gt;
+     &lt;script src="https://cdn.jsdelivr.net/gh/kamalkoranga/BinaryCSS@latest/dist/js/binarycss.min.js" defer&gt;&lt;/script&gt;
+    &lt;style&gt;
+      
+      .color-utilities {
+        padding: 2rem;
+        font-family: sans-serif;
 
-&lt;div class="row"&gt;
-  &lt;div class="col-md-6"&gt;
-    &lt;div class="card"&gt;
-      &lt;div class="card-body"&gt;
-        &lt;h5 class="card-title"&gt;Card Title&lt;/h5&gt;
-        &lt;p class="card-text"&gt;Some quick example text to build on the card.&lt;/p&gt;
-        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-  &lt;div class="col-md-6"&gt;
-    &lt;div class="card"&gt;
-      &lt;div class="card-body"&gt;
-        &lt;h5 class="card-title"&gt;Card Title&lt;/h5&gt;
-        &lt;p class="card-text"&gt;Some quick example text to build on the card.&lt;/p&gt;
-        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+        }
 
-&lt;script src="path/to/Binary.js"&gt;&lt;/script&gt;
+        .docs-block {
+          margin-bottom: 2rem;
+
+          h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+          }
+
+          .demo {
+            display: inline-block;
+            padding: 1rem;
+            margin: 0.5rem;
+            text-align: center;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            color: #111; /* Default text color */
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+&lt;section class="color-utilities container"&gt;
+      &lt;h2&gt;Font Color and Background Color Utilities&lt;/h2&gt;
+
+      &lt;!-- Font Color Examples --&gt;
+      &lt;div class="docs-block"&gt;
+        &lt;h3&gt;Font Color&lt;/h3&gt;
+        &lt;div class="demo text-black" style="background-color: #f3f4f6"&gt;
+          .text-black
+        &lt;/div&gt;
+        &lt;div class="demo text-white" style="background-color: #4b5563"&gt;
+          .text-white
+        &lt;/div&gt;
+        &lt;div class="demo text-gray" style="background-color: #f3f4f6"&gt;
+          .text-gray
+        &lt;/div&gt;
+        &lt;div class="demo text-red" style="background-color: #fef2f2"&gt;
+          .text-red
+        &lt;/div&gt;
+        &lt;div class="demo text-green" style="background-color: #f0fdf4"&gt;
+          .text-green
+        &lt;/div&gt;
+        &lt;div class="demo text-blue" style="background-color: #eff6ff"&gt;
+          .text-blue
+        &lt;/div&gt;
+        &lt;div class="demo text-yellow" style="background-color: #fffbeb"&gt;
+          .text-yellow
+        &lt;/div&gt;
+        &lt;div class="demo text-purple" style="background-color: #f5f3ff"&gt;
+          .text-purple
+        &lt;/div&gt;
+        &lt;div class="demo text-indigo" style="background-color: #eef2ff"&gt;
+          .text-indigo
+        &lt;/div&gt;
+        &lt;div class="demo text-pink" style="background-color: #fce7f3"&gt;
+          .text-pink
+        &lt;/div&gt;
+        &lt;div class="demo text-rose" style="background-color: #fef2f2"&gt;
+          .text-rose
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Background Color Examples --&gt;
+      &lt;div class="docs-block"&gt;
+        &lt;h3&gt;Background Color&lt;/h3&gt;
+        &lt;div class="demo bg-black text-white"&gt;.bg-black&lt;/div&gt;
+        &lt;div class="demo bg-white text-black"&gt;.bg-white&lt;/div&gt;
+        &lt;div class="demo bg-gray text-black"&gt;.bg-gray&lt;/div&gt;
+        &lt;div class="demo bg-red text-black"&gt;.bg-red&lt;/div&gt;
+        &lt;div class="demo bg-green text-black"&gt;.bg-green&lt;/div&gt;
+        &lt;div class="demo bg-blue text-black"&gt;.bg-blue&lt;/div&gt;
+        &lt;div class="demo bg-yellow text-black"&gt;.bg-yellow&lt;/div&gt;
+        &lt;div class="demo bg-purple text-black"&gt;.bg-purple&lt;/div&gt;
+        &lt;div class="demo bg-indigo text-black"&gt;.bg-indigo&lt;/div&gt;
+        &lt;div class="demo bg-pink text-black"&gt;.bg-pink&lt;/div&gt;
+        &lt;div class="demo bg-rose text-black"&gt;.bg-rose&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;html&gt;</code></pre>
                         </div>
 
                         <h3 id="browser-support" class="small-heading fw-thick mt-4 mb-2">Browser Support</h3>
@@ -3324,7 +3378,7 @@
                         <h3 id="grid-system" class="small-heading fw-thick mt-4 mb-2">Grid System</h3>
                         <p>BinaryCSS includes a responsive 12-column grid system that helps you create flexible layouts
                             for any screen size.</p>
-                        <div class="grid-example mt-3">
+                        <div class="grid-example mt-3 flex">
                             <div class="row grid-demo">
                                 <div class="col-md-6 grid-demo-col">
                                     <div class="grid-demo-box text-2xl">col-md-6</div>
@@ -3402,7 +3456,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h4 class="fw-thick mt-4 mb-2">Responsive Breakpoints</h4>
+                        <h4 class="fw-thick mt-4 mb-2" id="responsive">Responsive Breakpoints</h4>
                         <p>The grid system includes six tiers of predefined classes for building responsive layouts:</p>
 
                         <div class="breakpoints-table mt-3 border-thin">
