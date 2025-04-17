@@ -17,6 +17,6 @@
 // Text Alignment Utilities
 @each $key, $value in $text-alignments {
   .text-#{$key} {
-    text-align: $value;
+    text-align: $value !important;
   }
 }

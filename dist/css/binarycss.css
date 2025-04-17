@@ -16,7 +16,7 @@ body {
 }
 
 .border-none {
-  border: none;
+  border: none !important;
 }
 
 .border-top {
@@ -952,19 +952,19 @@ body {
 }
 
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .text-justify {
-  text-align: justify;
+  text-align: justify !important;
 }
 
 .w-auto {
