@@ -120,7 +120,86 @@
       </div>
     </section>
 
-    
+    <section class="popular-foods p-[64px] flex flex-col bg-[#b1454a] " id="menu">
+      <h2 class="popular-foods__title text-[56px] font-semibold text-white text-center" data-aos="flip-up">
+        Popular Food / 人気
+      </h2>
+
+      <div class="popular-foods__filters sushi__hide-scrollbar mt-[48px] flex justify-center" data-aos="fade-up">
+        <button class="popular-foods__filter-btn active bg-white tc-[#b1454a] py-[10px] px-[28px] flex flex-row items-center text-[16px] font-normal">
+          All
+        </button>
+        <button class="popular-foods__filter-btn py-[10px] px-[28px] flex flex-row items-center text-[16px] font-normal">
+          <img src="assets/sushi-9.png" alt="sushi 9" class="w-[36px] h-[36px]" />
+          Sushi
+        </button>
+        <button class="popular-foods__filter-btn py-[10px] px-[28px] flex flex-row items-center text-[16px] font-normal">
+          <img src="assets/sushi-8.png" alt="sushi 8" class="w-[36px] h-[36px]" />
+          Ramen
+        </button>
+        <button class="popular-foods__filter-btn py-[10px] px-[28px] flex flex-row items-center text-[16px] font-normal">
+          <img src="assets/sushi-7.png" alt="sushi 7" class="w-[36px] h-[36px]"/>
+          Udon
+        </button>
+        <button class="popular-foods__filter-btn py-[10px] px-[28px] flex flex-row items-center text-[16px] font-normal">
+          <img src="assets/sushi-6.png" alt="sushi 6" class="w-[36px] h-[36px]"/>
+          Danggo
+        </button>
+        <button class="popular-foods__filter-btn py-[10px] px-[28px] flex flex-row items-center text-[16px] font-normal">All</button>
+      </div>
+
+      <div class="popular-foods__catalogue mt-[64px] flex justify-center items-end flex-wrap" data-aos="fade-up">
+        <article class="popular-foods__card p-[38px] flex items-center flex-col bg-[#ffffff0d]">
+          <img class="popular-foods__card-image w-[110px] h-[84px]" src="assets/sushi-12.png"
+            alt="sushi-12" />
+          <h4 class="popular-foods__card-title mt-[47px] font-semibold text-[24px] text-white text-center">Chezu Sushi</h4>
+
+          <div class="popular-foods__card-details flex-between flex justify-between items-center">
+            <div class="popular-foods__card-rating flex items-center">
+              <img src="assets/star.svg" alt="star" class="w-[24px] h-[24px]"/>
+              <p class="text-[20px] font-light text-white">4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price text-[20px] font-medium text-white">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card active-card p-[38px] flex items-center flex-col bg-white">
+          <img class="popular-foods__card-image w-[214px] h-[160px]" src="assets/sushi-11.png"
+            alt="sushi-11" />
+          <h4 class="popular-foods__card-title tc-[#555555] text-[32px]">Original Sushi</h4>
+
+          <div class="popular-foods__card-details flex-between flex justify-between items-center">
+            <div class="popular-foods__card-rating flex items-center">
+              <img src="assets/star.svg" alt="star" class="w-[32px] h-[32px]"/>
+              <p class="text-[24px] tc-[#555555]">5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price text-[24px] tc-[#555555] font-medium">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card p-[38px] flex items-center flex-col bg-[#ffffff0d]">
+          <img class="popular-foods__card-image w-[110px] h-[84px]" src="assets/sushi-10.png"
+            alt="sushi-10" />
+          <h4 class="popular-foods__card-title mt-[47px] font-semibold text-[24px] text-white text-center">Ramen Legendo</h4>
+
+          <div class="popular-foods__card-details flex-between flex justify-between items-center">
+            <div class="popular-foods__card-rating flex items-center">
+              <img src="assets/star.svg" alt="star" class="w-[24px] h-[24px]"/>
+              <p class="text-[20px] font-light text-white">4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price text-[20px] font-medium text-white">$13.00</p>
+          </div>
+        </article>
+      </div>
+
+      <button class="popular-foods__button py-[20px] px-[30px] mt-[80px] mx-[auto] mb-0 font-medium text-[18px] text-white bg-[#121212]">
+        Explore Food
+        <img src="assets/arrow-right.svg" alt="arrow-right" class="w-[14px] h-[14px] ml-[21px]" />
+      </button>
+    </section>
 
 
     <script src="js/script.js" type="module"></script>
