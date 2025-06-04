@@ -1,4 +1,9 @@
-# BinaryCSS
+<div align="center">
+  <img src="doc/img/binary-logo-color.svg" alt="BinaryCSS Logo" width="100" />
+  <h1 style="margin: 0;">BinaryCSS</h1>
+</div>
+
+
 
 **BinaryCSS** is a lightweight and customizable utility-first CSS framework built for rapid UI development. Designed with scalability and performance in mind, BinaryCSS gives you full control over styling with a utility-based approach and a rich set of pre-built components.
 
